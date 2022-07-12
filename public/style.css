@@ -266,7 +266,8 @@ End of Keyboard Styles
     width: 50%;
     max-width: -webkit-fill-available;
     height: 50px;
-    border-radius: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 

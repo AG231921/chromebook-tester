@@ -194,7 +194,7 @@ async function testMic() {
     const audioSource = audioContext.createMediaStreamSource(audioStream);
     const analyser = audioContext.createAnalyser();
     analyser.fftSize = 512;
-    analyser.minDecibels = -200;
+    analyser.minDecibels = -130;
     analyser.maxDecibels = 0;
     analyser.smoothingTimeConstant = 0.4;
     audioSource.connect(analyser);
@@ -206,7 +206,7 @@ async function testMic() {
       const averageVolume = volumeSum / volumes.length;
       volumeVisualizer.style.setProperty(
         "--volume",
-        (averageVolume * 100) / 200 + "%"
+        (averageVolume * 100) / 130 + "%"
       );
       var taxi;
       taxi = document.getElementById("mic_result");
