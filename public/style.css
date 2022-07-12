@@ -10,6 +10,7 @@ body {
   --text-color: #bdc1c6;
   --border-color: #5f6368;
   --text-color-desc: #b6babf;
+  --hover-bg-color: #31353C;
 }
 
 * {
@@ -70,6 +71,11 @@ body {
   margin: 10px;
   cursor: pointer;
   text-align: center;
+  transition: background-color 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--hover-bg-color);
 }
 
 .speaker-btns {
@@ -88,7 +94,12 @@ body {
   text-align: center;
   background-color: var(--section-color);
   color: var(--default-color);
+  transition: background-color 0.4s;
   border: 1px solid var(--border-color);
+}
+
+.speaker-btn:hover {
+  background-color: var(--hover-bg-color);
 }
 
 /**

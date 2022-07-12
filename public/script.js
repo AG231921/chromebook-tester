@@ -210,7 +210,7 @@ async function testMic() {
       );
       var taxi;
       taxi = document.getElementById("mic_result");
-      taxi.innerText = "Your Microphone is Working! 😇";
+      taxi.innerText = "Result: Your Microphone is Working! 😇";
     };
     if (volumeCallback !== null && volumeInterval === null) {
             volumeInterval = setInterval(volumeCallback, 100);
@@ -230,7 +230,7 @@ async function testMic() {
       volumeVisualizer.style.setProperty("--volume", volume + "%");
       var taxi;
       taxi = document.getElementById("mic_result");
-      taxi.innerText = "Status: Microphone is not working! ❌";
+      taxi.innerText = "Result: Microphone is not working! ❌";
     };
   }
 }
