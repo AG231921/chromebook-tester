@@ -283,7 +283,7 @@ End of Keyboard Styles
     border-radius: 5px;
     width: var(--volume);
     max-width: -webkit-fill-available;
-    background-color: green;
+    background-color: var(--default-color);
     transition: width 100ms linear;
 }
 
