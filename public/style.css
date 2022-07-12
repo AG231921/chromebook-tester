@@ -263,7 +263,8 @@ End of Keyboard Styles
 .bar {
     --volume: 0%;
     position: relative;
-    width: 100%;
+    width: 50%;
+    max-width: -webkit-fill-available;
     height: 50px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -277,6 +278,7 @@ End of Keyboard Styles
     left: 0;
     border-radius: 5px;
     width: var(--volume);
+    max-width: -webkit-fill-available;
     background-color: green;
     transition: width 100ms linear;
 }
