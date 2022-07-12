@@ -212,6 +212,9 @@ async function testMic() {
       taxi = document.getElementById("mic_result");
       taxi.innerText = "Your Microphone is Working! 😇";
     };
+    if (volumeCallback !== null && volumeInterval === null) {
+            volumeInterval = setInterval(volumeCallback, 100);
+    }
   } catch (e) {
     console.error(
       "Failed to initialize volume visualizer, simulating instead...",
