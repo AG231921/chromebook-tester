@@ -97,8 +97,9 @@ document.getElementById("fullKeyboard").addEventListener(
   true
 );
 
+let promise;
+
 async function getBattery() {
-  let promise;
 
   await navigator.getBattery().then(function (battery) {
     let bat_charging = battery.charging ? "charging" : "discharging";
@@ -107,9 +108,8 @@ async function getBattery() {
     battery.addEventListener("chargingchange", onChargingChange);
     battery.addEventListener("levelchange", onLevelChange);
     promise = Math.round(bat_level * 100) + "% " + bat_charging;
-    //return promise;
+    return promise;
   });
-  return promise;
 }
 
 function onChargingChange() {
