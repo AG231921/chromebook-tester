@@ -110,7 +110,7 @@ async function getBattery() {
     promise = Math.round(bat_level * 100) + "% " + bat_charging;
     battery_elem.innerText = promise;
     //return promise;
-  }).catch(err=> {
+  }).catch(function(err) {
     console.log(err)
   });
 }
