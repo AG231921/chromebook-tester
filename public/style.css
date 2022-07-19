@@ -11,6 +11,7 @@ body {
   --border-color: #5f6368;
   --text-color-desc: #b6babf;
   --hover-bg-color: #31353C;
+  --active-bg-color: #5a7093;
 }
 
 * {
@@ -78,6 +79,10 @@ body {
   background-color: var(--hover-bg-color);
 }
 
+.btn:active {
+  background-color: var(--active-bg-color);
+}
+
 .speaker-btns {
   display: inline;
   height: 120px;
@@ -100,6 +105,10 @@ body {
 
 .speaker-btn:hover {
   background-color: var(--hover-bg-color);
+}
+
+.speaker-btn:active {
+  background-color: var(--active-bg-color)
 }
 
 /**

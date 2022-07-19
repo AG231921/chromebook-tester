@@ -17,6 +17,7 @@ window.addEventListener("offline", checkInternet);
 
 const socket = io();
 const test_btns = document.getElementsByClassName("btn");
+const speaker_btns = document.getElementsByClassName("speaker-btn");
 
 /*Speaker Audio*/
 
@@ -33,13 +34,31 @@ Array.from(test_btns).forEach((button) => {
     } else if (button.dataset.test == "microphone") {
       testMic();
     } else if (button.dataset.test == "speaker") {
-      //let leftAud = new Audio("/audio/left.mp3");
-      //let midAud = new Audio("/audio/mid.mp3");
-      //let rightAud = new Audio("/audio/right.mp3");
+      button.disabled = true;
+      setTimeout(()=>{
+        button.disabled = false;
+      }, 7000)
       testAudio(leftAud, midAud, rightAud);
     }
   });
 });
+
+Array.from(speaker_btns).forEach((button) => {
+  button.addEventListener("click", async ()=>{
+    if(button.dataset.speaker == "left") {
+      leftAud.setPosition = 0;
+      leftAud.play();
+    }
+    else if(button.dataset.speaker == "middle"){
+      midAud.setPosition = 0;
+      midAud.play();
+    }
+    else if(button.dataset.speaker == "right") {
+      rightAud.setPosition = 0;
+      rightAud.play();
+    }
+  } )
+})
 
 async function loadLocalVid() {
   try {
