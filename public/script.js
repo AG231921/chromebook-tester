@@ -213,7 +213,7 @@ async function testMic() {
       averageVolume = volumeSum / volumes.length;
       volumeVisualizer.style.setProperty(
         "--volume",
-        (averageVolume * 150) / 90 + "%"
+        (averageVolume * 100) / volumes.length + "%"
       );
       var taxi;
       taxi = document.getElementById("mic_result");
