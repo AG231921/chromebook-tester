@@ -185,12 +185,12 @@ async function default_run() {
 
 /*audio below*/
 
-var audioContext, audioSource, analyser, averageVolume, volumes;
+var volumeVisualizer, audioContext, audioSource, analyser, averageVolume, volumes;
 
 async function testMic() {
   let volumeCallback = null;
   let volumeInterval = null;
-  const volumeVisualizer = document.getElementById("volume-visualizer");
+  volumeVisualizer = document.getElementById("volume-visualizer");
   try {
     const audioStream = await navigator.mediaDevices.getUserMedia({
       audio: {
