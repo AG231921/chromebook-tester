@@ -75,23 +75,23 @@ async function loadLocalVid() {
 // Press any key and the result will display on the page.
 document.getElementById("fullKeyboard").addEventListener(
   "keydown",
-  function (e) {
+  function (event) {
     event.preventDefault();
     //alert(e.code);
-    console.log(e.code);
-    greenKey(e.code);
+    console.log(event.code);
+    greenKey(event.code);
   },
   true
 );
 
 document.getElementById("fullKeyboard").addEventListener(
   "keyup",
-  function (e) {
+  function (event) {
     event.preventDefault();
     //alert(e.code);
     //console.log(e.code)
-    if (document.getElementById(e.code).classList.contains("active")) {
-      document.getElementById(e.code).classList.remove("active");
+    if (document.getElementById(event.code).classList.contains("active")) {
+      document.getElementById(event.code).classList.remove("active");
     }
   },
   true
@@ -185,6 +185,8 @@ async function default_run() {
 
 /*audio below*/
 
+var audioContext, audioSource, analyser, volumes;
+
 async function testMic() {
   let volumeCallback = null;
   let volumeInterval = null;
@@ -195,15 +197,15 @@ async function testMic() {
         echoCancellation: true,
       },
     });
-    const audioContext = new AudioContext();
-    const audioSource = audioContext.createMediaStreamSource(audioStream);
-    const analyser = audioContext.createAnalyser();
+    audioContext = new AudioContext();
+    audioSource = audioContext.createMediaStreamSource(audioStream);
+    analyser = audioContext.createAnalyser();
     analyser.fftSize = 512;
     analyser.minDecibels = -90;
     analyser.maxDecibels = 0;
     analyser.smoothingTimeConstant = 0.4;
     audioSource.connect(analyser);
-    const volumes = new Uint8Array(analyser.frequencyBinCount);
+    volumes = new Uint8Array(analyser.frequencyBinCount);
     volumeCallback = () => {
       analyser.getByteFrequencyData(volumes);
       let volumeSum = 0;
