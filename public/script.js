@@ -108,7 +108,10 @@ async function getBattery() {
     battery.addEventListener("chargingchange", onChargingChange);
     battery.addEventListener("levelchange", onLevelChange);
     promise = Math.round(bat_level * 100) + "% " + bat_charging;
-    return promise;
+    battery_elem.innerText = promise;
+    //return promise;
+  }).catch(err=> {
+    console.log(err)
   });
 }
 
@@ -171,7 +174,8 @@ function checkInternet(a) {
 }
 
 async function default_run() {
-  battery_elem.innerText = await getBattery();
+  //battery_elem.innerText = await getBattery();
+  await getBattery()
   cpu.innerText = navigator.hardwareConcurrency + " Cores";
   mem.innerText = navigator.deviceMemory + " GB of RAM";
   online.innerText = await checkInternet("function");
