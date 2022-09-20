@@ -268,6 +268,9 @@ var sidemenu_items = document.getElementsByClassName("item");
 
 Array.from(sidemenu_items).forEach(function(item) {
   item.addEventListener("click", function() {
+    for(let i=0; i < sidemenu_items.length; i++) {
+      sidemenu_items[i].classList.remove("selected");
+    }
     item.classList.toggle("selected");
   })
 })
