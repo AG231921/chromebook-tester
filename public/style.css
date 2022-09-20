@@ -45,7 +45,7 @@ body {
 
 .side_menu {
   position: fixed;
-  top: 95px;
+  top: 90px;
   overflow: hidden;
   left: 0;
   float: left;
@@ -78,7 +78,7 @@ body {
 
 .container {
   width: 75%;
-  margin-top: 95px;
+  margin-top: 90px;
   float: right;
   overflow-y: scroll;
   max-width: calc(100% - 175px);
