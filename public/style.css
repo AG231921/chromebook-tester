@@ -3,7 +3,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: "Roboto", sans-serif;
   background-color: rgb(32, 33, 36);
   --default-color: #8ab4f8;
@@ -22,6 +21,7 @@ body {
 .header {
   position: fixed;
   top: 0;
+  overflow: hidden;
   box-sizing: border-box;
   padding: 12px 8px;
   width: 100%;
@@ -45,6 +45,7 @@ body {
 .side_menu {
   position: fixed;
   top: 95px;
+  overflow: hidden;
   left: 0;
   float: left;
   height: 100%;
