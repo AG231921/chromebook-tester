@@ -3,6 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
   background-color: rgb(32, 33, 36);
   --default-color: #8ab4f8;
@@ -32,6 +33,7 @@ body {
 
 .header .title {
   font-size: 20px;
+  margin-left: 5px;
   color: var(--text-color)
 }
 
@@ -42,7 +44,7 @@ body {
 
 .side_menu {
   position: fixed;
-  top: 100px;
+  top: 95px;
   left: 0;
   float: left;
   height: 100%;
@@ -73,8 +75,9 @@ body {
 
 .container {
   width: 75%;
-  margin-top: 100px;
+  margin-top: 95px;
   float: right;
+  overflow-y: scroll;
   max-width: calc(100% - 175px);
 }
 
