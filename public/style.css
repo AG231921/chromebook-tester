@@ -28,6 +28,11 @@ body {
   width: 25%;
 }
 
+.side_menu .item {
+  display: flex;
+  text-decoration: none;
+}
+
 .container {
   width: 75%;
   float: right;
