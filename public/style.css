@@ -70,8 +70,8 @@ body {
 }
 
 .side_menu .item:hover {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   background-color: var(--hover-bg-color);
 }
 
