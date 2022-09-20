@@ -26,6 +26,11 @@ body {
   background-color: var(--section-color);
 }
 
+.header .title {
+  font-size: 14px;
+  color: var(--text-color)
+}
+
 .side_menu {
   position: fixed;
   top: 120px;
