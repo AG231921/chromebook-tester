@@ -14,6 +14,7 @@ body {
   --hover-bg-color: #31353C;
   --active-bg-color: #5a7093;
   --target-bg-color: #8ab4f8;
+  --selected-text-color: #272a31;
 }
 
 * {
@@ -63,7 +64,7 @@ body {
   text-decoration: none;
   border-top-right-radius: 50px; /*15px*/
   border-bottom-right-radius: 50px;
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 .side_menu .item:first-child {
@@ -77,7 +78,8 @@ body {
 }
 
 .side_menu .item:active {
-  background-color: var(--target-bg-color)
+  background-color: var(--target-bg-color);
+  color: var(--selected-text-color);
 }
 
 
