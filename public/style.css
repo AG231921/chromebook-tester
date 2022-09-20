@@ -3,6 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   background-color: rgb(32, 33, 36);
   --default-color: #8ab4f8;
@@ -73,6 +74,7 @@ body {
   border-bottom-right-radius: 15px;
   background-color: var(--hover-bg-color);
 }
+
 
 .container {
   width: 75%;
