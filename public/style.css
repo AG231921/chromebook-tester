@@ -77,7 +77,7 @@ body {
   background-color: var(--hover-bg-color);
 }
 
-.side_menu .item:active {
+.side_menu .item.selected {
   background-color: var(--target-bg-color);
   color: var(--selected-text-color);
 }
