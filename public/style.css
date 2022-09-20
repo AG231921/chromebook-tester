@@ -13,6 +13,7 @@ body {
   --text-color-desc: #b6babf;
   --hover-bg-color: #31353C;
   --active-bg-color: #5a7093;
+  --target-bg-color: #8ab4f8;
 }
 
 * {
@@ -73,6 +74,10 @@ body {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   background-color: var(--hover-bg-color);
+}
+
+.side_menu .item:active {
+  background-color: var(--target-bg-color)
 }
 
 
