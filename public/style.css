@@ -18,9 +18,17 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.side_menu {
+.header {
   position: fixed;
   top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--section-color);
+}
+
+.side_menu {
+  position: fixed;
+  top: 120px;
   left: 0;
   float: left;
   height: 100%;
@@ -51,6 +59,7 @@ body {
 
 .container {
   width: 75%;
+  margin-top: 100px;
   float: right;
   max-width: calc(100% - 175px);
 }
