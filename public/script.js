@@ -260,3 +260,14 @@ async function testMic() {
     };
   }
 }
+
+
+//Sidemenu Animation
+
+var sidemenu_items = document.getElementsByClassName("item");
+
+Array.from(sidemenu_items).forEach(function(item) {
+  item.addEventListener("click", function() {
+    item.classList.toggle("selected");
+  })
+})
