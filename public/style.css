@@ -115,6 +115,7 @@ body {
 
 #localVideo {
   height: 500px;
+  margin-top: 5px;
   background-color: #000;
   border-radius: 15px;
   width: 100%;
