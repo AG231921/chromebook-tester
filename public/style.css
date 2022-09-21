@@ -115,7 +115,7 @@ body {
 
 .section .title:focus {
   border: 1px solid var(--target-bg-color);
-
+  background: #fff;
 }
 
 #localVideo {
