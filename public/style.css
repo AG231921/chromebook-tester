@@ -113,10 +113,13 @@ body {
   padding: 5px;
   border-radius: 15px;
   margin-left: 10px;
+  border: 2px solid transparent;
+  margin-left: -2px;
   font-size: 18px;
 }
 
 .section .title:focus {
+
   border: 2px solid var(--default-color);
 }
 
