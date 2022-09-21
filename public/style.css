@@ -119,6 +119,7 @@ body {
   border-radius: 15px;
   width: 100%;
   object-fit: cover;
+  transform: rotateY(180deg);
 }
 
 .content {
