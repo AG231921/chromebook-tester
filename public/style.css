@@ -108,13 +108,16 @@ body {
 }
 
 .section .title {
-  margin-bottom: 10px;
-  margin-left: 15px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 15px;
+  margin-left: 10px;
   font-size: 18px;
 }
 
 .section .title:focus {
-  border: 1px solid var(--target-bg-color);
+  border: 2px solid var(--target-bg-color);
 }
 
 #localVideo {
