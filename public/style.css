@@ -77,6 +77,14 @@ body {
   background-color: var(--hover-bg-color);
 }
 
+.side_menu .item[title]:hover::after, .side_menu .item[title]:hover::before {
+  transition: all 0.4s;
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  right: -100%;
+}
+
 .side_menu .item.selected {
   background-color: var(--target-bg-color);
   color: var(--selected-text-color);
