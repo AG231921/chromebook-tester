@@ -268,9 +268,13 @@ var sidemenu_items = document.getElementsByClassName("item");
 
 Array.from(sidemenu_items).forEach(function(item) {
   item.addEventListener("click", function() {
-    for(let i=0; i < sidemenu_items.length; i++) {
+    let i = 0,
+        elem = item.href.split("#")[1];
+
+    for(i=0; i < sidemenu_items.length; i++) {
       sidemenu_items[i].classList.remove("selected");
     }
+    document.getElementById(elem).focus();
     item.classList.toggle("selected");
   })
 })

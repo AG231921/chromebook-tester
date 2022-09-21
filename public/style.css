@@ -113,6 +113,11 @@ body {
   font-size: 18px;
 }
 
+.section .ittle:focus {
+  border: 1px solid var(--target-bg-color);
+  
+}
+
 #localVideo {
   height: 500px;
   margin-top: 5px;
