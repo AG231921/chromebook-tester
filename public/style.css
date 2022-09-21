@@ -116,6 +116,7 @@ body {
   border: 2px solid transparent;
   margin-left: -2px;
   font-size: 18px;
+  transition: border-color 0.4s linear;
 }
 
 .section .title:focus {
