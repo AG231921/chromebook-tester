@@ -113,9 +113,9 @@ body {
   font-size: 18px;
 }
 
-.section .ittle:focus {
+.section .title:focus {
   border: 1px solid var(--target-bg-color);
-  
+
 }
 
 #localVideo {
