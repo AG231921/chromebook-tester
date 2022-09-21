@@ -119,7 +119,6 @@ body {
 }
 
 .section .title:focus {
-
   border: 2px solid var(--default-color);
 }
 
