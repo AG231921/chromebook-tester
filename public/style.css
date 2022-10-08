@@ -1,13 +1,10 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  overscroll-behavior: contain;
-  overflow-y: hidden;
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(32, 33, 36);
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  color-scheme: dark;
   --default-color: #8ab4f8;
   --section-color: #292a2d;
   --text-color: #bdc1c6;
@@ -19,8 +16,16 @@ body {
   --selected-text-color: #272a31;
 }
 
-* {
-  -webkit-tap-highlight-color: transparent;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  overflow-y: hidden;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(32, 33, 36);
 }
 
 .transition {
