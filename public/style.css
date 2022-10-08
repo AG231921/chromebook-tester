@@ -21,6 +21,21 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+.transition {
+  transition: opacity 0.6s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+.display {
+  display: none !important;
+}
+
 .header {
   position: fixed;
   top: 0;
