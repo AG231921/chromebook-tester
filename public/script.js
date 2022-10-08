@@ -277,8 +277,9 @@ Array.from(sidemenu_items).forEach(function(item) {
       sidemenu_items[i].classList.remove("selected");
     }
     if(elem !== current_visible_elem) {
+      let new_visible_elem = document.getElementById(elem)
       window.hideElem(current_visible_elem);
-      window.showElem(elem);
+      window.showElem(new_visible_elem);
     }
     //document.getElementById(elem).focus();
     item.classList.toggle("selected");
