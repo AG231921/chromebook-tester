@@ -263,19 +263,24 @@ async function testMic() {
 }
 
 
-//Sidemenu Animation
+//Sidemenu Animation & element
 
 var sidemenu_items = document.getElementsByClassName("item");
 
 Array.from(sidemenu_items).forEach(function(item) {
   item.addEventListener("click", function() {
     let i = 0,
-        elem = item.href.split("#")[1];
+        elem = item.href.split("#")[1],
+        current_visible_elem = document.getElementsByClassName("visible")[0];
 
     for(i=0; i < sidemenu_items.length; i++) {
       sidemenu_items[i].classList.remove("selected");
     }
-    document.getElementById(elem).focus();
+    if(elem !== current_visible_elem) {
+      window.hideElem(current_visible_elem);
+      window.showElem(elem);
+    }
+    //document.getElementById(elem).focus();
     item.classList.toggle("selected");
   })
 })
