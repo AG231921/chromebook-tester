@@ -276,13 +276,13 @@ Array.from(sidemenu_items).forEach(function(item) {
     for(i=0; i < sidemenu_items.length; i++) {
       sidemenu_items[i].classList.remove("selected");
     }
-    if(document.getElementById(elem) !== null)
-    if(elem !== current_visible_elem.id) {
-      let new_visible_elem = document.getElementById(elem)
-      window.hideElem(current_visible_elem);
-      window.showElem(new_visible_elem);
+    if(document.getElementById(elem) !== null) {
+      if(elem !== current_visible_elem.id) {
+       let new_visible_elem = document.getElementById(elem)
+        window.hideElem(current_visible_elem);
+        window.showElem(new_visible_elem);
+      }
     }
-  }
     //document.getElementById(elem).focus();
     item.classList.toggle("selected");
   })
