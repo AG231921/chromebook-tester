@@ -22,7 +22,7 @@ window.hideElem = async (element) => {
 }
 
 window.showElem = async (element) => {
-  //element.classList.add("visible")
+  element.classList.add("visible")
   if(element.classList.contains("hidden")) {
     element.classList.remove("display")
   }
