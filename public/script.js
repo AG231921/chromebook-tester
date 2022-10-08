@@ -278,9 +278,11 @@ Array.from(sidemenu_items).forEach(function(item) {
     }
     if(document.getElementById(elem) !== null) {
       if(elem !== current_visible_elem.id) {
-       let new_visible_elem = document.getElementById(elem)
+        let new_visible_elem = document.getElementById(elem);
         window.hideElem(current_visible_elem);
+        window.scrollTo(0,0);
         window.showElem(new_visible_elem);
+        window.scrollTo(0,0);
       }
     }
     //document.getElementById(elem).focus();
