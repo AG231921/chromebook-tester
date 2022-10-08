@@ -178,16 +178,17 @@ function testAudio(a, b, c) {
 }
 
 function checkInternet(a) {
-  if (a) {
+  if (a == "function") {
     if (navigator.onLine == true) {
       return "🟢 Operational";
-    } else if (navigator.onLine !== true) {
+    } else {
       return "🔴 Down";
     }
   } else {
-    if (navigator.onLine == true) {
+    let state = navigator.onLine ? 'online' : 'offline';
+    if (state == "online") {
       online.innerText = "🟢 Operational";
-    } else if (navigator.onLine !== true) {
+    } else if (state == "offline") {
       online.innerText = "🔴 Down";
     }
   }
