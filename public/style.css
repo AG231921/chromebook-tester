@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  overflow-y: hidden;
   font-family: "Roboto", sans-serif;
   background-color: rgb(32, 33, 36);
   --default-color: #8ab4f8;
@@ -29,11 +31,12 @@ body {
   opacity: 0 ;
 }
 
-.visible {
-  font-family: inherit;
-}
 .display {
   display: none !important;
+}
+
+.main {
+  height: 100%;
 }
 
 .header {
@@ -105,12 +108,13 @@ body {
   color: var(--selected-text-color);
 }
 
-
 .container {
   width: 80%;
   margin-top: 90px;
+  height: -webkit-fill-available;
   float: right;
   overflow-y: scroll;
+  overscroll-behavior: auto;
   max-width: calc(100% - 150px);
 }
 
