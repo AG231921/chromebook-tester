@@ -26,11 +26,11 @@ body {
 }
 
 .hidden {
-  opacity: 0 !important;
+  opacity: 0 ;
 }
 
 .visible {
-  opacity: 1;
+  font-family: inherit;
 }
 .display {
   display: none !important;
