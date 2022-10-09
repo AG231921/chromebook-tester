@@ -446,14 +446,14 @@ End of Keyboard Styles
 
 
 
-input[type=checkbox] {
+.input[type=checkbox] {
   height: 0;
   width: 0;
   display: none;
   visibility: hidden;
 }
 
-label {
+.label {
   cursor: pointer;
   text-indent: -9999px;
   width: 55px;
@@ -463,12 +463,12 @@ label {
   vertical-align: middle;
   margin-top: 8px;
   height: 29px;
-  background: grey;
+  background: #9AA0A6;
   border-radius: 100px;
   position: relative;
 }
 
-label:after {
+.label:after {
   content: "";
   position: absolute;
   top: 5px;
@@ -480,15 +480,15 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked + label {
+.input:checked + label {
   background: var(--default-color);
 }
 
-input:checked + label:after {
+.input:checked + label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
 
-label:active:after {
+.label:active:after {
   width: 30px;
 }
