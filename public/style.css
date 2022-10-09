@@ -134,9 +134,9 @@ body {
 .section .title {
   margin-bottom: 5px;
   box-sizing: border-box;
+  display: inline-block;
   padding: 5px;
   border-radius: 15px;
-  margin-left: 10px;
   border: 2px solid transparent;
   margin-left: -2px;
   font-size: 18px;
@@ -449,16 +449,21 @@ End of Keyboard Styles
 input[type=checkbox] {
   height: 0;
   width: 0;
+  display: none;
   visibility: hidden;
 }
 
 label {
   cursor: pointer;
   text-indent: -9999px;
-  width: 100px;
-  height: 50px;
+  width: 55px;
+  align-self: auto;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  margin-top: 8px;
+  height: 29px;
   background: grey;
-  display: block;
   border-radius: 100px;
   position: relative;
 }
@@ -468,8 +473,8 @@ label:after {
   position: absolute;
   top: 5px;
   left: 5px;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background: #fff;
   border-radius: 90px;
   transition: 0.3s;
@@ -485,5 +490,5 @@ input:checked + label:after {
 }
 
 label:active:after {
-  width: 50px;
+  width: 30px;
 }
