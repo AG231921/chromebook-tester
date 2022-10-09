@@ -475,13 +475,13 @@ label:after {
   left: 5px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: var(--selected-text-color);
   border-radius: 90px;
   transition: 0.3s;
 }
 
 input:checked + label {
-  background: #bada55;
+  background: var(--default-color);
 }
 
 input:checked + label:after {
