@@ -494,6 +494,7 @@ End of Keyboard Styles
 
 .barcode {
   border-radius: 15px;
+  max-width: 100%;
 }
 
 #last-barcode {
