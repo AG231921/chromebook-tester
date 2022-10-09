@@ -441,7 +441,7 @@ End of Keyboard Styles
 }
 
 
-/* Switches */
+/* Switches & Barcode Styles*/
 
 
 
@@ -490,4 +490,8 @@ End of Keyboard Styles
 
 .label:active:after {
   width: 30px;
+}
+
+.barcode {
+  border-radius: 15px;
 }
