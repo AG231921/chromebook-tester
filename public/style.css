@@ -458,7 +458,6 @@ End of Keyboard Styles
   text-indent: -9999px;
   width: 55px;
   align-self: auto;
-  display: inline-block;
   float: right;
   vertical-align: middle;
   margin-top: 8px;
@@ -480,11 +479,11 @@ End of Keyboard Styles
   transition: 0.3s;
 }
 
-.input:checked + label {
+.input:checked + .label {
   background: var(--default-color);
 }
 
-.input:checked + label:after {
+.input:checked + .label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }

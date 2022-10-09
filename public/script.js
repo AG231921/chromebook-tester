@@ -289,3 +289,37 @@ Array.from(sidemenu_items).forEach(function(item) {
     item.classList.toggle("selected");
   })
 })
+
+
+/* Barcode Scanner Function + Enabler & Disabler */
+
+var barcode = "";
+var bc_interval;
+var bc_btn = document.getElementById("bc_btn");
+
+document.addEventListener("keydown", handleBarcode, false);
+
+bc_btn.addEventListener("click", function(evt) {
+  if(bc_btn.classList.contains("clicked")) {
+    bc_btn.classList.remove("clicked");
+    document.removeEventListener("keydown", handleBarcode, false);
+  } else {
+    bc_btn.classList.add("clicked");
+    document.addEventListener("keydown", handleBarcode, false);
+  }
+})
+
+function printBarcode(scanned_barcode) {
+	document.getElementById("last-barcode").innerHTML = scanned_barcode;
+}
+
+function handleBarcode(evt) {
+	if (bc_interval) clearInterval(bc_interval);
+	if (evt.code == "Enter") {
+		if (barcode) printBarcode(barcode);
+		barcode = "";
+		return;
+	}
+	if (evt.key != "Shift") barcode += evt.key;
+	bc_interval = setInterval(() => (barcode = ""), 20);
+}
