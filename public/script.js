@@ -322,7 +322,7 @@ var br_gen_func = (function() {
           JsBarcode("#barcode", "Sample Barcode", {
             displayValue: false,
             background: "var(--section-color)",
-            textColor: "var(--text-color)"
+            lineColor: "var(--text-color)"
           });
        }
     }
