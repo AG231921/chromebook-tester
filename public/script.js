@@ -319,9 +319,13 @@ var br_gen_func = (function() {
           br_gen_script.src = "https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js";
           document.body.append(br_gen_script);
           br_gen_script.onload = function() {
-            JsBarcode("#barcode", "Hi world!");
-          }
-      }
+          JsBarcode("#barcode", "Sample Barcode", {
+            displayValue: false,
+            background: "var(--section-color)",
+            textColor: "var(--text-color)"
+          });
+       }
+    }
   };
 })();
 
