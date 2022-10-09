@@ -304,10 +304,25 @@ bc_btn.addEventListener("click", function(evt) {
     bc_btn.classList.remove("clicked");
     document.removeEventListener("keydown", handleBarcode, false);
   } else {
+    br_gen_func();
     bc_btn.classList.add("clicked");
     document.addEventListener("keydown", handleBarcode, false);
   }
 })
+
+var br_gen_func = (function() {
+  var executed = false;
+  return function() {
+      if (!executed) {
+          executed = true;
+          let br_gen_script = "https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js";
+          document.body.append(br_gen_script);
+          br_gen_script.onload = function() {
+            JsBarcode("#barcode", "Hi world!");
+          }
+      }
+  };
+})();
 
 function printBarcode(scanned_barcode) {
 	document.getElementById("last-barcode").innerHTML = scanned_barcode;
