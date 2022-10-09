@@ -322,7 +322,7 @@ var br_gen_func = (function() {
           JsBarcode("#barcode", "Sample Barcode", {
             displayValue: false,
             background: "var(--section-color)",
-            lineColor: "var(--text-color)"
+            lineColor: "var(--text-color)",
           });
        }
     }
@@ -330,7 +330,13 @@ var br_gen_func = (function() {
 })();
 
 function printBarcode(scanned_barcode) {
-	document.getElementById("last-barcode").innerHTML = scanned_barcode;
+  navigator.clipboard.writeText(scanned_barcode);
+  JsBarcode("#barcode", scanned_barcode, {
+    displayValue: false,
+    background: "var(--section-color)",
+    lineColor: "var(--text-color)",
+  });
+	document.getElementById("last-barcode").innerHTML = "Last Scanned Barcode: " + scanned_barcode;
 }
 
 function handleBarcode(evt) {
