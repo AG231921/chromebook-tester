@@ -297,6 +297,7 @@ var barcode = "";
 var bc_interval;
 var bc_btn = document.getElementById("bc_btn");
 
+document.addEventListener("keydown", handleBarcode, false);
 
 bc_btn.addEventListener("click", function(evt) {
   if(bc_btn.classList.contains("clicked")) {
@@ -335,7 +336,7 @@ function printBarcode(scanned_barcode) {
     background: "var(--section-color)",
     lineColor: "var(--text-color)",
   });
-	document.getElementById("last-barcode").innerHTML = "Last Scanned Barcode: " + scanned_barcode;
+	document.getElementById("last-barcode").innerHTML = scanned_barcode;
 }
 
 function handleBarcode(evt) {
