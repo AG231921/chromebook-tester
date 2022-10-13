@@ -297,16 +297,18 @@ var barcode = "";
 var bc_interval;
 var bc_btn = document.getElementById("bc_btn");
 
-document.addEventListener("keydown", handleBarcode, false);
+//document.addEventListener("keydown", handleBarcode, false);
 
 bc_btn.addEventListener("click", function(evt) {
   if(bc_btn.classList.contains("clicked")) {
     bc_btn.classList.remove("clicked");
-    document.removeEventListener("keydown", handleBarcode, false);
+    //document.removeEventListener("keydown", handleBarcode, false);
+    document.removeEventListener("scan", printBarcode);
   } else {
     br_gen_func();
     bc_btn.classList.add("clicked");
-    document.addEventListener("keydown", handleBarcode, false);
+    document.addEventListener("scan", printBarcode);
+    //document.addEventListener("keydown", handleBarcode, false);
   }
 })
 
@@ -324,12 +326,19 @@ var br_gen_func = (function() {
             background: "var(--section-color)",
             lineColor: "var(--text-color)",
           });
+          let onscan_script = document.createElement("script");
+          onscan_script.src = "/onscan.min.js";
+          document.body.append(onscan_script)
+          onscan_script.onload = function() {
+            onScan.attachTo(document);
+            document.addEventListener("scan", printBarcode);
+          }
        }
     }
   };
 })();
 
-function printBarcode(scanned_barcode) {
+function printBarcode(scanned_barcode, iQuantity) {
   navigator.clipboard.writeText(scanned_barcode);
   JsBarcode("#barcode", scanned_barcode, {
     displayValue: false,
