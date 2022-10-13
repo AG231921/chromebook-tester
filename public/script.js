@@ -339,7 +339,8 @@ var br_gen_func = (function() {
 })();
 
 function printBarcode(scanned_barcode, iQuantity) {
-  navigator.clipboard.writeText(scanned_barcode);
+  let code = scanned_barcode.detail.scanCode;
+  navigator.clipboard.writeText(code);
   JsBarcode("#barcode", scanned_barcode, {
     displayValue: false,
     background: "var(--section-color)",
@@ -347,7 +348,7 @@ function printBarcode(scanned_barcode, iQuantity) {
   });
   console.log(scanned_barcode)
   console.log(JSON.stringify(scanned_barcode))
-	document.getElementById("last-barcode").innerHTML = JSON.stringify(scanned_barcode.detail.scanCode);
+	document.getElementById("last-barcode").innerHTML = code;
 }
 
 function handleBarcode(evt) {
