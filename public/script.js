@@ -346,7 +346,7 @@ function printBarcode(scanned_barcode, iQuantity) {
     lineColor: "var(--text-color)",
   });
   console.log(scanned_barcode)
-  console.log(JSON.stringify(canned_barcode))
+  console.log(JSON.stringify(scanned_barcode))
 	document.getElementById("last-barcode").innerHTML = scanned_barcode;
 }
 
