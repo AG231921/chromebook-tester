@@ -346,6 +346,19 @@ function printBarcode(scanned_barcode, iQuantity) {
     let in_the_box = new Audio("/assets/inboxes.mp3");
     in_the_box.play();
   }
+
+  /* 
+  
+    https://shancarter.github.io/mr-data-converter/
+ 
+    let str = '';
+    str = str.replaceAll("],[", ",");
+    str = str.replace("[[", "[");
+    str = str.replace("]]", "]");
+    document.body.innerText = str;
+
+    
+  */
   navigator.clipboard.writeText(code);
   JsBarcode("#barcode", scanned_barcode, {
     displayValue: false,
