@@ -354,7 +354,7 @@ function printBarcode(scanned_barcode, iQuantity) {
   });
   console.log(scanned_barcode)
   console.log(JSON.stringify(scanned_barcode))
-	document.getElementById("last-barcode").innerHTML = code;
+	document.getElementById("last-barcode").innerText = code;
 }
 
 function handleBarcode(evt) {
