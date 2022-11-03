@@ -340,6 +340,12 @@ var br_gen_func = (function() {
 
 function printBarcode(scanned_barcode, iQuantity) {
   let code = scanned_barcode.detail.scanCode;
+  let boxes = ["LD01135", "A15217", "A15260", "LD00656", "LD00604", "LD001075", "A14491", "A18145", "A16237", "LD01248", "A14538", "A17072", "A15286", "LD00089", "LD01216", "LD00710", "A14513", "A14535", "A15400", "A19703", "A19756", "LD01147", "A15964", "LD00860", "A19065", "LD00719", "A19770"]
+
+  if(boxes.includes(code) == true) {
+    let in_the_box = new Audio("/assets/inboxes.mp3");
+    in_the_box.play();
+  }
   navigator.clipboard.writeText(code);
   JsBarcode("#barcode", scanned_barcode, {
     displayValue: false,
