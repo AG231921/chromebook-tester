@@ -347,9 +347,11 @@ function printBarcode(scanned_barcode, iQuantity) {
     in_the_box.play();
   }
 
-  /* 
+    /* 
   
     https://shancarter.github.io/mr-data-converter/
+
+    https://codepen.io/pen
  
     let str = '';
     str = str.replaceAll("],[", ",");
@@ -357,8 +359,8 @@ function printBarcode(scanned_barcode, iQuantity) {
     str = str.replace("]]", "]");
     document.body.innerText = str;
 
-    
-  */
+
+    */
   navigator.clipboard.writeText(code);
   JsBarcode("#barcode", scanned_barcode, {
     displayValue: false,
