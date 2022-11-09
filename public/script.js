@@ -340,7 +340,7 @@ var br_gen_func = (function() {
 
 function printBarcode(scanned_barcode, iQuantity) {
   let code = scanned_barcode.detail.scanCode;
-  let boxes = ["LD01135", "A15217", "A15260", "LD00656", "LD00604", "LD001075", "A14491", "A18145", "A16237", "LD01248", "A14538", "A17072", "A15286", "LD00089", "LD01216", "LD00710", "A14513", "A14535", "A15400", "A19703", "A19756", "LD01147", "A15964", "LD00860", "A19065", "LD00719", "A19770"]
+  let boxes = ["A20023","A18210","A16584","A15913","A19182","A20001","LD00655","LD00900","A16723","A19737","A16133","LD01138","A14873","A19788","A-14781","A15347","","LD00613","LD00377","LD00841","LD01198","A18059","A18075","A18111","A14997","A15404","A15995","LD00317","LD01026","LD00961","LD00571","LD00950","A19962","A19933","A19181","A16952","A19127","A17920","A-14456","A-14744","A16568","A16282","A-14485","A16068"]
 
   if(boxes.includes(code) == true) {
     let in_the_box = new Audio("/assets/inboxes.mp3");
@@ -356,6 +356,7 @@ function printBarcode(scanned_barcode, iQuantity) {
     let str = '';
     str = str.replaceAll("],[", ",");
     str = str.replace("[[", "[");
+    str = str.replace("-", "");
     str = str.replace("]]", "]");
     document.body.innerText = str;
 
