@@ -7,8 +7,8 @@ var io = require("socket.io")(http, {
     origin: "*",
   },
 });
-var req = require("request");
-//const editJsonFile = require("edit-json-file");
+//var req = require("request");
+/*const editJsonFile = require("edit-json-file");
 const shrinkRay = require("shrink-ray-current");
 const { instrument } = require("@socket.io/admin-ui");
 instrument(io, {
@@ -22,7 +22,7 @@ var file = new DotJson('users.json');
 
 
 
-app.use(shrinkRay());
+app.use(shrinkRay());*/
 app.use(express.json());
 
 app.use("*", checkHttps);
@@ -37,7 +37,7 @@ app.get("/", (request, response) => {
 
 //let file = editJsonFile(`${__dirname}/users.json`)
 
-app.get("/web", (request, response) => {
+/*app.get("/web", (request, response) => {
 //console.log(file.get("110985367046008285478.name"))
   //file.set('110985367046008285478.name', 'John Doe').save();
   response.send(file.get())
@@ -63,7 +63,7 @@ app.post("/account", (request, response) => {
   }
 })
 
-/*app.get("/url", async (request, response) => {
+app.get("/url", async (request, response) => {
   if (request.query.q) {
     var val = request.query.q;
 
@@ -102,7 +102,7 @@ app.post("/account", (request, response) => {
   } else {
     response.send("url missing");
   }
-});*/
+});
 
 app.get("/iframe", (request, response) => {
   response.sendFile(__dirname + "/views/iframe.html");
@@ -139,7 +139,7 @@ app.get("/test", (request, response) => {
 app.get("/beta", (request, response) => {
   response.sendFile(__dirname + "/index.html");
   //requested url by user for show
-});
+});*/
 
 function getKeyByValue(object, value) {
   for (var prop in object) {
