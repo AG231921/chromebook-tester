@@ -3,9 +3,9 @@ navigator.wakeLock.request("screen");
 let script1 = document.createElement("script");
 script1.src = "https://cdn.socket.io/4.5.2/socket.io.js";
 let script2 = document.createElement("script");
-script2.src = "/detect.min.js";
+script2.src = "/assets/scripts/detect.min.js";
 let script3 = document.createElement("script");
-script3.src = "/script.js";
+script3.src = "assets/scripts/script.js";
 
 document.body.append(script1);
 document.body.append(script2);
