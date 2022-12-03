@@ -15,7 +15,7 @@ window.addEventListener("offline", checkInternet);
 
 //var target = document.getElementById("target");
 
-const socket = io();
+//const socket = io();
 const test_btns = document.getElementsByClassName("btn");
 const speaker_btns = document.getElementsByClassName("speaker-btn");
 
