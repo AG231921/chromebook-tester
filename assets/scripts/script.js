@@ -280,9 +280,9 @@ Array.from(sidemenu_items).forEach(function(item) {
       if(elem !== current_visible_elem.id) {
         let new_visible_elem = document.getElementById(elem);
         window.hideElem(current_visible_elem);
-        window.scrollTo(0,0);
+        window.scrollTo({top:0, behavior: 'smooth'});
         window.showElem(new_visible_elem);
-        window.scrollTo(0,0);
+        window.scrollTo({top:0, behavior: 'smooth'});
       }
     }
     //document.getElementById(elem).focus();
@@ -383,3 +383,6 @@ function handleBarcode(evt) {
 	if (evt.key != "Shift") barcode += evt.key;
 	bc_interval = setInterval(() => (barcode = ""), 20);
 }
+
+
+/* Email Directory Code */
