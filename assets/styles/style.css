@@ -36,6 +36,10 @@ body {
   opacity: 0;
 }
 
+.visible {
+  opacity: 1;
+}
+
 .display {
   display: none !important;
 }
