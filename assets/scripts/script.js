@@ -280,7 +280,7 @@ Array.from(sidemenu_items).forEach(function(item) {
       if(elem !== current_visible_elem.id) {
         let new_visible_elem = document.getElementById(elem);
         window.hideElem(current_visible_elem);
-        window.scrollTo({top:0, behavior: 'smooth'});
+        //window.scrollTo({top:0, behavior: 'smooth'});
         window.showElem(new_visible_elem);
         window.scrollTo({top:0, behavior: 'smooth'});
       }
