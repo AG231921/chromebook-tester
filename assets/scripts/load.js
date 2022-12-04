@@ -14,12 +14,12 @@ script1.onload = () => {
 };
 
 window.hideElem = async (element) => {
-  element.classList.add("hidden");
+  element.classList.add("display");
   if(element.classList.contains("visible")) {
     element.classList.remove("visible");
   }
   element.scrollTo({top:0, left:0, behavior: 'smooth'});
-  setTimeout(() => element.classList.add("display"), 900);
+  setTimeout(() => element.classList.add("hidden"), 1000);
 }
 
 window.showElem = async (element) => {
