@@ -123,11 +123,8 @@ body {
   float: right;
   overflow-y: scroll;
   overscroll-behavior: auto;
+  margin-top: 90px;
   max-width: calc(100% - 150px);
-}
-
-.placeholder {
-  height: 100px !important;
 }
 
 .section {
