@@ -119,12 +119,15 @@ body {
 
 .container {
   width: 80%;
-  margin-top: 90px;
   height: -webkit-fill-available;
   float: right;
   overflow-y: scroll;
   overscroll-behavior: auto;
   max-width: calc(100% - 150px);
+}
+
+.placeholder {
+  height: 100px !important;
 }
 
 .section {
