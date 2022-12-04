@@ -18,7 +18,7 @@ window.hideElem = async (element) => {
   if(element.classList.contains("visible")) {
     element.classList.remove("visible");
   }
-  document.body.scrollTo({top:-100, left:0, behavior: 'smooth'});
+  element.scrollTo({top:-100, left:0, behavior: 'smooth'});
   setTimeout(() => element.classList.add("display"), 900);
 }
 
@@ -27,5 +27,6 @@ window.showElem = async (element) => {
   if(element.classList.contains("hidden")) {
     element.classList.remove("display");
   }
+  element.scrollTo({top:-100, left:0, behavior: 'smooth'});
   setTimeout(() => element.classList.remove("hidden"), 1000)
 }
