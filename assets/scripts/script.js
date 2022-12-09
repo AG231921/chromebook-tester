@@ -340,8 +340,8 @@ var br_gen_func = (function() {
 
 function printBarcode(scanned_barcode, iQuantity) {
   let code = scanned_barcode.detail.scanCode;
-  let boxes = ["A14439", "A17969", "A16821", "A19328", "LD00127", "LD00233", "LD00001", "A18077"]
-  
+  let boxes = ["A14485", "A18129", "LD00730", "A16591", "LD00233", "A17070", "A14318", "A20050", "A16219", "A14541", "A20032", "A19890", "A15242", "LD00138","A16475","A16212","A14722","A16773","A16729","A14591", "A16594", "A18085", "A19174", "LD00501", "A14560", "A14711", "A14446", "A14478", "A19788", "A16783", "A18196", "A19677", "A16696", "A18048", "A15288", "A17030", "A15937", "A18252"]
+  let serial_tags = ["8QZ2P53", "5DX2P53", "FNSP8D3", "876W8D3", "92MM7Y2", "3C7G6Y2", "7B3X8D3", "CT0D6Y2", "FNJQ8D3", "BND2P53", "1KFFTQ3", "G6WN8D3", "15F2P53", "F2ZFTQ3", "851HTQ3", "BLHL7Y2", "GYTVN53", "5P4F6Y2","4QWR8D3","1SN24D3","C35VN53","FQT9TD3","G85Q8D3","48VSN53", "J29X8D3", "6B5Q8D3", "GYWDTQ3", "6YLM7Y2", "1KJVN53", "HXW2P53", "4HX2P53", "C5MTN53", "4T80P53", "H9V2P53", "2BF0043", "594GTQ3", "HHJQ8D3", "6HXV8D3", "3ZNGTQ3", "3XQ97D3", "1VTW8D3", "8NM1P53", "654QL63", "2M6TN53", "D99X8D3", "63SFTQ3"]
   if(boxes.includes(code) == true) {
     let in_the_box = new Audio("/assets/gui/inboxes.mp3");
     in_the_box.play();
@@ -356,7 +356,7 @@ function printBarcode(scanned_barcode, iQuantity) {
     let str = '';
     str = str.replaceAll("],[", ",");
     str = str.replace("[[", "[");
-    str = str.replace("-", "");
+    str = str.replaceAll("-", "");
     str = str.replace("]]", "]");
     document.body.innerText = str;
 
