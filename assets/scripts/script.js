@@ -343,7 +343,7 @@ function printBarcode(scanned_barcode, iQuantity) {
   let boxes = ["A14667", "JZMZZ33"]
 
   if(boxes.includes(code) == true) {
-    let in_the_box = new Audio("/assets/inboxes.mp3");
+    let in_the_box = new Audio("/assets/gui/inboxes.mp3");
     in_the_box.play();
   }
 
