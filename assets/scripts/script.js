@@ -340,8 +340,8 @@ var br_gen_func = (function() {
 
 function printBarcode(scanned_barcode, iQuantity) {
   let code = scanned_barcode.detail.scanCode;
-  let boxes = ["A14667", "JZMZZ33"]
-
+  let boxes = ["A14439", "A17969", "A16821", "A19328", "LD00127", "LD00233", "LD00001"]
+  
   if(boxes.includes(code) == true) {
     let in_the_box = new Audio("/assets/gui/inboxes.mp3");
     in_the_box.play();
