@@ -327,7 +327,7 @@ var br_gen_func = (function() {
             lineColor: "var(--text-color)",
           });
           let onscan_script = document.createElement("script");
-          onscan_script.src = "/onscan.min.js";
+          onscan_script.src = "/assets/scripts/onscan.min.js";
           document.body.append(onscan_script)
           onscan_script.onload = function() {
             onScan.attachTo(document);
