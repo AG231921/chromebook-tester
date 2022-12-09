@@ -7,11 +7,11 @@ script2.src = "/assets/scripts/detect.min.js";
 let script3 = document.createElement("script");
 script3.src = "/assets/scripts/script.js";
 
-document.body.append(script1);
+//document.body.append(script1);
 document.body.append(script2);
-script1.onload = () => {
-  document.body.append(script3);
-};
+document.body.append(script3);
+//script1.onload = () => {
+//};
 
 window.hideElem = async (element) => {
   element.classList.add("display");

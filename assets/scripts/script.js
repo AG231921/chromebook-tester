@@ -318,7 +318,7 @@ var br_gen_func = (function() {
       if (!executed) {
           executed = true;
           let br_gen_script = document.createElement("script");
-          br_gen_script.src = "https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js";
+          br_gen_script.src = "/assets/scripts/jsbarcode.js";
           document.body.append(br_gen_script);
           br_gen_script.onload = function() {
           JsBarcode("#barcode", "Sample Barcode", {
