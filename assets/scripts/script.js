@@ -345,6 +345,9 @@ function printBarcode(scanned_barcode, iQuantity) {
   if(boxes.includes(code) == true) {
     let in_the_box = new Audio("/assets/gui/inboxes.mp3");
     in_the_box.play();
+  } else if(serial_tags.includes(code)) {
+    let in_the_box = new Audio("/assets/gui/inboxes.mp3");
+    in_the_box.play();
   }
 
     /* 
