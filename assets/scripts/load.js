@@ -19,7 +19,7 @@ window.hideElem = async (element) => {
     element.classList.remove("visible");
   }
   //element.scrollTo({top:0, left:0, behavior: 'smooth'});
-  setTimeout(() => element.classList.add("hidden"), 800);
+  setTimeout(() => element.classList.add("hidden"), 1000);
 }
 
 window.showElem = async (element) => {

@@ -118,6 +118,7 @@ body {
 }
 
 .container {
+  scroll-padding-top: 120px;
   width: 80%;
   height: -webkit-fill-available;
   float: right;

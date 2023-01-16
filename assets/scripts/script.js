@@ -8,7 +8,9 @@ var player,
   online = document.getElementById("online_stat"),
   sys = document.getElementById("operating_sys");
 
-default_run();
+window.onload(()=> {
+  default_run();
+})
 
 window.addEventListener("online", checkInternet);
 window.addEventListener("offline", checkInternet);
@@ -280,9 +282,9 @@ Array.from(sidemenu_items).forEach(function(item) {
       if(elem !== current_visible_elem.id) {
         let new_visible_elem = document.getElementById(elem);
         window.hideElem(current_visible_elem);
-        document.body.scrollTo({top:-100, left:0, behavior: 'smooth'});
+        document.body.scrollTo(0);
         window.showElem(new_visible_elem);
-        document.body.scrollTo({top:-100, left:0, behavior: 'smooth'});
+        document.body.scrollTo(0);
       }
     }
     //document.getElementById(elem).focus();
