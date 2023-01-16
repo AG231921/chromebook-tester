@@ -26,5 +26,5 @@ window.showElem = async (element) => {
   if(element.classList.contains("hidden")) {
     element.classList.remove("display");
   }
-  setTimeout(() => element.classList.remove("hidden"), 900)
+  setTimeout(() => element.classList.remove("hidden"), 1100)
 }
