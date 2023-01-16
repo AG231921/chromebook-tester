@@ -8,9 +8,9 @@ var player,
   online = document.getElementById("online_stat"),
   sys = document.getElementById("operating_sys");
 
-window.onload(()=> {
+//window.onload(()=> {
   default_run();
-})
+//})
 
 window.addEventListener("online", checkInternet);
 window.addEventListener("offline", checkInternet);
