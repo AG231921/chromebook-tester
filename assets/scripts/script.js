@@ -343,7 +343,7 @@ var br_gen_func = (function() {
 
 function printBarcode(scanned_barcode, iQuantity) {
   let code = scanned_barcode.detail.scanCode;
-  let boxes = [];
+  let boxes = ["A19777","A17072","A16647","A19936","LD00989","A16724","A16293","LD00973","A16106","A15205","A15391","A16600","A16974","A16981","LD00508","A14773","LD00899","A14630","A19669","A19117","A19584","A19326","A15037","A15170","LD01049","A16229","A16290","A15994","A15982","A15115","A15274","A19185","A19018","LD00686","A16294","LD01200","LD00242"];
   let serial_tags = ["42ZTN53","88MGTQ3","DZCHTQ3","8HC8TQ3","D09RTQ3","6JRX8D3","D381P53","HFFFTQ3","J886TQ3","73PSN53","B3K8TQ3","8BC8TQ3","3V66TQ3","458S8D3","6YZ3TQ3","3C1TN53","68MP8D3","JVN24D3","2LMS8D3","BHSFTQ3","47LVZ33","2L6HTQ3","6NV24D3","1F2HTQ3","B5T1P53","2DWX8D3","4L06TQ3","D87TN53","1Z9WZ33"]
   if(boxes.includes(code) == true) {
     let in_the_box = new Audio("/assets/gui/inboxes.mp3");
